@@ -1,5 +1,8 @@
 # projectsera
 
+![Test Image 1](https://github.com/berkaybolac/vuejs-dashboard-signin-signup-age/1.jfif)
+![Test Image 2](https://github.com/berkaybolac/vuejs-dashboard-signin-signup-age/2.jfif)
+
 ## Project setup
 ```
 npm install
