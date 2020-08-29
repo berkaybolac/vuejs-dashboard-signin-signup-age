@@ -1,0 +1,13 @@
+Isı
+Nem
+Havalandırma
+Karbondioksit
+Karbonmonoksit
+Işık
+Otomatik valfler
+Rüzgar ve yönü
+Yağmur sensörleri
+Rüzgar sensörleri
+Drenaj
+Gübreleme 
+Ec ve ph
