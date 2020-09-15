@@ -1,5 +1,5 @@
 # MyProject
-# Tutorial Images
+#  Images GIF
 ![Test Image 0](https://github.com/berkaybolac/vuejs-dashboard-signin-signup-age/blob/master/tutorial.gif)
 
 
