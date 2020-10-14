@@ -1,153 +1,122 @@
 <template >
 <div >
   <v-app >
-    <v-content>
-      <v-container  class=" fill-height" fluid>
-          <v-row  align="center" justify="center">
+    <v-content >
+      <v-container  class="fill-height " fluid>
+          <v-row align="center" justify="center">
             <v-col cols="12" sm="8" md="8">
-            <v-card class="elevation-16">
-                <v-window v-model ="step">
-                  <v-window-item :value="1">
-                    <v-row>
-                      <v-col cols="12" md="8">
+            <v-card class="elevation-16 ">
+              <v-window v-model ="step">
+                <v-window-item  :value="1">
+                  <v-row>
+                    <v-col cols="12" md="8">
+                      <v-container
+                          align="center"
+                          justify="center"
+                          class="rounded-lg"
+                      >
+                        <v-card class ="elevation-0">
+                          <v-img
+                              src="@/assets/Enka_logo.svg"
+                              aspect-ratio="4"
+                              align="center"
+                              justify="center"
+                              contain
+
+
+                          ></v-img>
+                        </v-card>
+                        </v-container>
                       <v-card-text class="mt-12 ">
-                        <h1 class=" text-center display-2 teal--text text--accent-3 "> Sign in to 
-                          <span class=" text-start display-2 teal--text text--accent-3 font-weight-thin ">Ser</span>
-                        <span class=" text-start display-2 teal--text text--accent-3 font-weight-bold ">AOT</span></h1> 
                         <div class="text-center" mt-4>
-                         <v-btn class="mx-2 elevation-5" fab outlined >
-                            <v-icon>fab fa-facebook-f</v-icon>
-                          </v-btn>
-                          <v-btn class="mx-2 elevation-5" fab outlined>
-                            <v-icon>fab fa-google-plus-g</v-icon>
-                          </v-btn>
-                          <v-btn class="mx-2 elevation-5" fab  outlined>
-                            <v-icon>fab fa-microsoft</v-icon>
-                          </v-btn>
+
+                          <h2 class="display-2">
+                            <vue-typed-js :strings="['Technology for a Better Future', 'Engineering for a Better Future']">
+                              <h2  class="display-2 typing"></h2>
+                            </vue-typed-js>
+                          </h2>
+
                         </div>
-                        <br>
-                        <h4 class="text-center ml-4"> Ensure email for registration</h4>
-                        <v-form>
-                          <v-text-field
-                          label="Email"
-                          name="Email"
-                          prepend-icon="email"
-                          type="text"
-                          color="teal accent-3"
-                          />
-                          <v-text-field
-                          label="Password"
-                          name="password"
-                          prepend-icon="lock"
-                          type="password"
-                          color="teal accent-3"
-                          />
-                        </v-form>
-                        <h3 class="text-center mt-3"> Forget your password? </h3>
                       </v-card-text>
-                      
                       <div class ="text-center mt-3">
-                        <router-link to="/about" tag="none"> 
-                        <v-btn rounded color="teal accent-3" dark >
-                          Sign In
-                        </v-btn>
-                         </router-link>
-                       </div>
-                      </v-col>
-                      <v-col cols="12" md="4"  class="teal accent-3">
-                        <v-row>
-                          <v-col cols="12" md="4" >
-                            <v-switch
-                            v-model="$vuetify.theme.dark"
-                            label="Dark Mode" 
-                            color="black"
-                            light
+                        <router-link to="/about" tag="none">
+                          <v-btn rounded color="teal" dark >
+                            <h2 class="overline">
+                              <vue-typed-js :strings="['', 'Lets start']">
+                                <h2  class="overline typing"></h2>
+                              </vue-typed-js>
+                            </h2>
+                          </v-btn>
+                        </router-link>
+                      </div>
+                    </v-col>
+                    <v-col  cols="12" md="4"  class="teal ">
+                      <v-row >
+                        <v-col  cols="12" md="4" >
+                          <v-switch
+
+                              v-model="$vuetify.theme.dark"
+                              label="Dark Mode"
+                              color="black"
+                              light
                           >
                           </v-switch>
-                          </v-col>
-                        </v-row>
-                        <v-card-text class="white--text mt-12">
-                          <h2 class="text-center display-3">
-                            Hello, SerAOUT ! 
-                          </h2>
-                          <h5 class="text-center">
-Welcome to SerAOT autonomous systems, another world awaits you after logging in!</h5>
-                        </v-card-text>
-                        <div class="text-center">
-                          <v-btn rounded outlined="" dark @click="step++">SIGN UP</v-btn>
+                        </v-col>
+                      </v-row>
+                      <v-card-text class="white--text mt-12">
+
+                        <h2 class="text-right display-3">
+
+                        </h2>
+
+                      </v-card-text>
+
+                      <div class="text-center">
+                        <v-btn rounded outlined="" dark @click="step++">What is A.I?</v-btn>
+                      </div>
+
+                    </v-col>
+
+                  </v-row>
+                </v-window-item>
+                <v-window-item :value="2">
+                  <v-row class="fill-height" >
+                    <v-col cols="12" md="4" class="teal">
+                      <v-card-text class="white--text mt-12">
+                        <h1 class="text-center display-1">Welcome Back!</h1>
+                        <h5 class="text-center">Other Page Is New Era</h5>
+                      </v-card-text>
+                      <div class="text-center">
+                        <v-btn rounded outlined dark @click="step--">Return A.I Page</v-btn>
+                      </div>
+                    </v-col>
+                    <v-col cols="12" md="8">
+                      <v-card-text class="mt-12">
+                        <h1 class="text-sm-center teal--text text--accent-3">Artificial Intelligence
+                        </h1>
+                        <div class="text-center mt-4">
+
                         </div>
-                      </v-col>
-                    </v-row>
-                  </v-window-item>
-                  <v-window-item :value="2">
-                    <v-row class="fill-height" >
-                      <v-col cols="12" md="4" class="teal accent-3">
-                       <v-card-text class="white--text mt-12">
-                       <h1 class="text-center display-1">Welcome Back!</h1>
-                       <h5 class="text-center">Keep connected with us please login with your personel info.</h5>
-                       </v-card-text>
-                       <div class="text-center">
-                         <v-btn rounded outlined dark @click="step--">SIGN IN</v-btn>
-                       </div>
-                      </v-col>
-                      <v-col cols="12" md="8">
-                        <v-card-text class="mt-12">
-                          <h1 class="text-sm-center teal--text text--accent-3">Create Account</h1>
-                          <div class="text-center mt-4">
-                            <v-btn class="mx-2" fab outlined>
-                              <v-icon>fab fa-facebook-f</v-icon>
-                            </v-btn>
-                            <v-btn class="mx-2" fab  outlined>
-                              <v-icon>fab fa-google-plus-g</v-icon>
-                            </v-btn>
-                            <v-btn class="mx-2" fab  outlined>
-                              <v-icon>fab fa-microsoft</v-icon>
-                            </v-btn>
-                          </div>
-                          <h4 class="text-center mt-4">Ensure your email & SerAOUT ID for registration</h4>
-                          <v-form>
-                            <v-text-field
-                            label="Name"
-                            name ="Name"
-                            prepend-icon="person"
-                            type="text"
-                            color="teal accent-3"
-                            />
-                            <v-text-field
-                            label="Email"
-                            name ="Email"
-                            prepend-icon="email"
-                            type="text"
-                            color="teal accent-3"
-                            />
-                            <v-text-field
-                            label="Password"
-                            name ="password"
-                            prepend-icon="lock"
-                            type="password"
-                            color="teal accent-3"
-                            />
-                             <v-text-field
-                            label="Your SerAOUT ID"
-                            name ="password"
-                            prepend-icon="fa-key"
-                            type="password"
-                            color="teal accent-3"
-                            />
-                          </v-form>
-                          <div class="text-center">
-                            
-                            <v-btn  rounded color="teal accent-3" dark >
-                              SIGN UP
-                            </v-btn>
-                          
-                          </div>
-                        </v-card-text>
-                       </v-col>
-                    </v-row>
-                   
-                  </v-window-item>
-                </v-window>
+                        <h2 class="overline">
+                          <vue-typed-js :strings="['Artificial intelligence (AI),','is intelligence demonstrated by machines, unlike the natural intelligence displayed by humans and animals.  Artificial intelligence (AI), is intelligence demonstrated by machines, unlike the natural intelligence displayed by humans and animals. Leading AI textbooks define the field as the study of intelligent agents: any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals. Colloquially, the term artificial intelligence is often used to describe machines (or computers) that mimic cognitive functions that humans associate with the human mind, such as learning and problem solving.']">
+                            <h4 class="text-center mt-4 typing">
+                              </h4>
+
+                          </vue-typed-js>
+                        </h2>
+                        <v-form>
+
+                        </v-form>
+                        <div class="text-center">
+
+
+                        </div>
+                      </v-card-text>
+                    </v-col>
+                  </v-row>
+
+                </v-window-item>
+              </v-window>
             </v-card>
             </v-col>
           </v-row>
@@ -177,8 +146,40 @@ export default {
 }
 </script>
 
+
 <style>
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 
+span {
+  display: inline-block;
+}
 
+.v--vtt-test,
+.v--vtt-test_odd {
+  will-change: transform, opacity;
+  transition: opacity 0.3s ease-in-out, transform 1s ease-in-out;
+}
 
+.v--vtt-test_visible,
+.v--vtt-test_odd_visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.v--vtt-test_hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.v--vtt-test_odd_hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+}
 </style>

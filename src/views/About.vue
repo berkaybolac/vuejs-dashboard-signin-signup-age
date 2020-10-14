@@ -1,13 +1,41 @@
 <template>
-  <v-app >
+
+  <v-app>
+
     <v-content>
-      <v-row>
-          <v-navigation-drawer
+      <v-app-bar
+          app
+          color="teal accent-3"
+          dark
+          elevation
+          clipped-left
+      >
+
+        <v-btn class="mx-2 elevation-5" @click.stop="drawer = !drawer" outlined white><v-icon>fa-align-left</v-icon></v-btn>
+        <v-avatar class="mx-2">
+          <img src="@/assets/Enka_logo.svg" >
+        </v-avatar>
+        <v-spacer>
+        </v-spacer>
+
+        <v-switch
+            v-model="$vuetify.theme.dark"
+            label="Dark Mode"
+            color="black"
+            light
+        >
+        </v-switch>
+
+      </v-app-bar>
+
+
+      <v-navigation-drawer
       v-model="drawer"
       app
       clipped
       style="box-shadow: 8px 0px 5px -6px rgba(0,0,0,0.22);"
     >
+
       <v-list >
         <v-subheader class=" mt-4 grey--text text--darken-1 display-1">WELCOME </v-subheader>
         <v-list-item  link>
@@ -16,12 +44,12 @@
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>
-              <span class=" teal--text text--accent-3 font-weight-thin ">Nazif Yılmaz</span>
+              <span class="text-left teal--text text--accent-3 font-weight-thin ">Enka Systems</span>
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         
-        <v-subheader class="mt-4 grey--text text--darken-1">CLIMATE SYSTEM'S</v-subheader>
+        <v-subheader class="mt-4 grey--text text--darken-1">Helmet Detector SYSTEM'S</v-subheader>
         <v-list-item link>
           <v-list-item-action>
             <v-icon>mdi-home</v-icon>
@@ -32,10 +60,10 @@
         </v-list-item>
         <v-list-item link>
           <v-list-item-action>
-            <v-icon>mdi-warehouse</v-icon>
+            <v-icon>mdi-arrow-decision-outline</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Green House Changer</v-list-item-title>
+            <v-list-item-title>Detect Changer</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link>
@@ -43,7 +71,7 @@
             <v-icon>mdi-history</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Green House History</v-list-item-title>
+            <v-list-item-title>Detect History</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item  link>
@@ -51,7 +79,7 @@
             <v-icon>mdi-information-outline</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Green House Warning List</v-list-item-title>
+            <v-list-item-title>Detect Warning List</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item  link>
@@ -88,234 +116,126 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-
-      </v-row>
-      
-    <v-app-bar
-      app
-      color="teal accent-3"
-      dark
-      elevation
-      clipped-left 
-    >
-      <v-btn class="mx-2 elevation-5" @click.stop="drawer = !drawer" outlined white><v-icon>fa-align-left</v-icon></v-btn>
-      <v-toolbar-title class="font-weight-light">
-        Ser
-      </v-toolbar-title>
-      <v-toolbar-title class="font-weight-bold">
-         AOUT
-      </v-toolbar-title>
-       <v-spacer>
-       </v-spacer>
-          <v-switch
-          v-model="$vuetify.theme.dark"
-          label="Dark Mode" 
-          color="black"
-          light
-        >   
-        </v-switch>   
-    </v-app-bar>
-    <v-bottom-navigation
+      <v-row
+          align="center"
+          justify="center"
+        >
+        <v-bottom-navigation
             dark
             shift
             fill
-            
-          >
-            <v-btn>
-              <span>Green House 1</span>
-              <v-icon>mdi-warehouse</v-icon>
-            </v-btn>
-
-            <v-btn>
-              <span>Green House 2</span>
-              <v-icon>mdi-warehouse</v-icon>
-            </v-btn>
-
-            <v-btn>
-              <span>Green House 3</span>
-              <v-icon>mdi-warehouse</v-icon>
-            </v-btn>
-            <v-btn>
-              <span>Green House 4</span>
-              <v-icon>mdi-warehouse</v-icon>
-            </v-btn>
-            <v-btn>
-              <span>Green House 5</span>
-              <v-icon>mdi-warehouse</v-icon>
-            </v-btn>
-            
-          </v-bottom-navigation>
-        <v-row 
-        
-          align="center"
-          justify="center"
         >
-        <v-col v-for="i in 4" :key="i"  cols="12" sm="3" class="text-center">
+          <v-btn>
+            <span>Detect Images Page</span>
+            <v-icon>mdi-card-search</v-icon>
+          </v-btn>
+          <v-btn>
+            <span>Detect Vidos Page</span>
+            <v-icon>mdi-video-box</v-icon>
+          </v-btn>
+          <v-btn>
+            <span>Detect IP Camera Page</span>
+            <v-icon>mdi-video-wireless</v-icon>
+          </v-btn>
+        </v-bottom-navigation>
+
+        <v-col cols="12" sm="6" class="text-center">
            <v-card
               class="mx-auto"
-              max-width="344"
+              max-width="765"
               outlined
               shaped
+              fill
               elevation="5"
               color="teal"
-              dark
-                  >
-              <v-list-item three-line>
+              dark>
+              <v-list-item>
                 <v-list-item-content>
-                  <div class="overline mb-4">Heat</div>
+                  <div class="overline mb-4">Detect Image</div>
+                  <v-img
+                      :src="this.selectedFile"
+                      aspect-ratio="2.2"
+                      contain
+                  ></v-img>
                   <v-list-item>
                     <div class="text-center ma-12">
-                      <v-progress-circular
-                        
-                        rotate="120"
-                        size="90"
-                        value="40"
-                        width="6"
-                        color="white"
-                      >40 C°</v-progress-circular>
+
                     </div>
                   </v-list-item>
-                  <v-list-item-subtitle>If this heat 60C° please contact us. </v-list-item-subtitle>
+                  <v-list-item-subtitle>Image to be processed </v-list-item-subtitle>
                 </v-list-item-content>
-                   <v-list-item-avatar
-                  tile
-                  size="85"
-                  
-                >
-                <h1 class="text-left display-1">
-                           40 C°
-                          </h1>
-                </v-list-item-avatar>
-               
               </v-list-item>
+            <v-card-actions>
 
-              <v-card-actions>
-                <v-btn class="elevation-3" color="teal accent-3" light >
-                  <v-icon outlined >mdi-refresh</v-icon> 
+                <v-btn @change="onFileChanged" outlined class="elevation-3" dark>
+                  <label >
+                    <input  hidden type="file" >
+                    Choose File
+                  </label>
                 </v-btn>
-                <v-btn  class="elevation-3" color="teal accent-3" light="">
-                  <v-icon outlined >mdi-content-save-outline</v-icon> 
-                  </v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
-        </v-row>
-        <v-row
-          align="center"
-          justify="center"
-        >
-        <v-col v-for="i in 4" :key="i"  cols="12" sm="3" class="text-center">
-           <v-card
-              class="mx-auto"
-              max-width="344"
-              outlined
-              shaped
-              elevation="5"
-              color="teal acent-3"
-              dark
-                  >
-              <v-list-item three-line>
+          <v-col   cols="12" sm="6" class="text-center">
+            <v-card
+                class="mx-auto"
+                max-width="765"
+                outlined
+                shaped
+                fill
+                elevation="5"
+                color="teal"
+                dark>
+              <v-list-item>
                 <v-list-item-content>
-                  <div class="overline mb-4">OVERLINE</div>
-                  <v-list-item-title class="headline mb-1">Headline 5</v-list-item-title>
-                  <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
+                  <div class="overline mb-4">Detected Image</div>
+                  <v-img
+                      :src="this.selectedFile"
+                      aspect-ratio="2.2"
+                      contain
+                  ></v-img>
+                  <v-list-item>
+                    <div class="text-center ma-12">
+                    </div>
+                  </v-list-item>
+                  <v-list-item-subtitle>Detected Items:  </v-list-item-subtitle>
                 </v-list-item-content>
-
-                <v-list-item-avatar
-                  tile
-                  size="80"
-                  color="grey"
-                >
-                
-                </v-list-item-avatar>
               </v-list-item>
-
               <v-card-actions>
-                <v-btn text>Button</v-btn>
-                <v-btn text>Button</v-btn>
+                <v-btn outlined class="elevation-3"  dark>
+                  <v-icon outlined>mdi-content-save-outline</v-icon>
+                </v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
         </v-row>
-        <v-row
-          align="center"
-          justify="center"
-        >
-        <v-col v-for="i in 4" :key="i"  cols="12" sm="3" class="text-center">
-           <v-card
-              class="mx-auto"
-              max-width="344"
-              outlined
-              shaped
-              elevation="5"
-              color="teal acent-3"
-              dark
-                  >
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <div class="overline mb-4">OVERLINE</div>
-                  <v-list-item-title class="headline mb-1">Headline 5</v-list-item-title>
-                  <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
-                </v-list-item-content>
 
-                <v-list-item-avatar
-                  tile
-                  size="80"
-                  color="grey"
-                >
-                
-                </v-list-item-avatar>
-              </v-list-item>
 
-              <v-card-actions>
-                <v-btn text>Button</v-btn>
-                <v-btn text>Button</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-col>
-          
-        </v-row>
-         <v-row
-          align="center"
-          justify="center"
-        >
-        <v-col cols="12" sm="3" class="text-center">
-           Rüzgar sensörleri
-          </v-col>
-          <v-col cols="12" sm="3" class="text-center">
-           Drenaj
-          </v-col>
-          <v-col  cols="12" sm="3" class="text-center">
-           Gübreleme 
-          </v-col>
-          
-        </v-row>
-     
 
          
 
-    <v-main>
-     
-    </v-main>
     <v-footer
-      color="teal accent-3"
+      color="teal"
       app
     >
       <span class="white--text"> Designed By Berkay BOLAÇ    {{ new Date().getFullYear() }} &copy;</span>
     </v-footer>
+
     </v-content>
+
   </v-app>
 </template>
 
 <script>
 // @ is an alias to /src
-
 export default {
   name: 'About',
   components: {
 
   },
   data:() =>({
+    selectedFile: null,
+    file:null,
      drawer: null,
      disabled: false,
       readonly: false,
@@ -339,6 +259,14 @@ export default {
    
    
   }),
+methods:{
+  onFileChanged (event) {
+    this.file = event.target.files[0]
+    this.selectedFile = URL.createObjectURL(this.file)
+    console.log(this.selectedFile)
+  },
+},
+
   props: {
       source: String,
     },

@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import VueTypedJs from 'vue-typed-js'
+Vue.use(VueTypedJs)
 
 Vue.use(VueRouter)
 
