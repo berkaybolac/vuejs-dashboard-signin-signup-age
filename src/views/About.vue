@@ -10,7 +10,6 @@
           elevation
           clipped-left
       >
-
         <v-btn class="mx-2 elevation-5" @click.stop="drawer = !drawer" outlined white><v-icon>fa-align-left</v-icon></v-btn>
         <v-avatar class="mx-2">
           <img src="@/assets/Enka_logo.svg" >
@@ -25,8 +24,28 @@
             light
         >
         </v-switch>
-
       </v-app-bar>
+
+      <v-bottom-navigation
+          dark
+          shift
+          fill
+          class=" mr-15"
+      >
+        <v-btn>
+          <span>Detect Images Page</span>
+          <v-icon>mdi-card-search</v-icon>
+        </v-btn>
+        <v-btn>
+          <span>Detect Vidos Page</span>
+          <v-icon>mdi-video-box</v-icon>
+        </v-btn>
+        <v-btn>
+          <span>Detect IP Camera Page</span>
+          <v-icon>mdi-video-wireless</v-icon>
+        </v-btn>
+      </v-bottom-navigation>
+
 
 
       <v-navigation-drawer
@@ -116,29 +135,12 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+
       <v-row
+          class="mx-3"
           align="center"
           justify="center"
         >
-        <v-bottom-navigation
-            dark
-            shift
-            fill
-        >
-          <v-btn>
-            <span>Detect Images Page</span>
-            <v-icon>mdi-card-search</v-icon>
-          </v-btn>
-          <v-btn>
-            <span>Detect Vidos Page</span>
-            <v-icon>mdi-video-box</v-icon>
-          </v-btn>
-          <v-btn>
-            <span>Detect IP Camera Page</span>
-            <v-icon>mdi-video-wireless</v-icon>
-          </v-btn>
-        </v-bottom-navigation>
-
         <v-col cols="12" sm="6" class="text-center">
            <v-card
               class="mx-auto"
