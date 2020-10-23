@@ -1,11 +1,12 @@
+<!--suppress ALL -->
 <template >
-<div >
+<div>
   <v-app >
     <v-content >
       <v-container  class="fill-height " fluid>
           <v-row align="center" justify="center">
-            <v-col cols="12" sm="8" md="8">
-            <v-card class="elevation-16 ">
+            <v-col cols="12" sm="8" md="8" >
+            <v-card class="elevation-16 teal accent-3" >
               <v-window v-model ="step">
                 <v-window-item  :value="1">
                   <v-row>
@@ -22,27 +23,24 @@
                               align="center"
                               justify="center"
                               contain
-
-
+                              class="teal accent-3"
                           ></v-img>
                         </v-card>
                         </v-container>
                       <v-card-text class="mt-12 ">
                         <div class="text-center" mt-4>
-
                           <h2 class="display-2">
                             <vue-typed-js :strings="['Technology for a Better Future', 'Engineering for a Better Future']">
                               <h2  class="display-2 typing"></h2>
                             </vue-typed-js>
                           </h2>
-
                         </div>
                       </v-card-text>
                       <div class ="text-center mt-3">
                         <router-link to="/about" tag="none">
                           <v-btn rounded color="teal" dark >
                             <h2 class="overline">
-                              <vue-typed-js :strings="['', 'Lets start']">
+                              <vue-typed-js :strings="['Lets start']">
                                 <h2  class="overline typing"></h2>
                               </vue-typed-js>
                             </h2>
@@ -50,11 +48,10 @@
                         </router-link>
                       </div>
                     </v-col>
-                    <v-col  cols="12" md="4"  class="teal ">
-                      <v-row >
+                    <v-col  cols="12" md="4"  class="teal">
+                      <v-row   >
                         <v-col  cols="12" md="4" >
                           <v-switch
-
                               v-model="$vuetify.theme.dark"
                               label="Dark Mode"
                               color="black"
@@ -63,20 +60,10 @@
                           </v-switch>
                         </v-col>
                       </v-row>
-                      <v-card-text class="white--text mt-12">
-
-                        <h2 class="text-right display-3">
-
-                        </h2>
-
-                      </v-card-text>
-
                       <div class="text-center">
                         <v-btn rounded outlined="" dark @click="step++">What is A.I?</v-btn>
                       </div>
-
                     </v-col>
-
                   </v-row>
                 </v-window-item>
                 <v-window-item :value="2">
@@ -92,29 +79,16 @@
                     </v-col>
                     <v-col cols="12" md="8">
                       <v-card-text class="mt-12">
-                        <h1 class="text-sm-center teal--text text--accent-3">Artificial Intelligence
-                        </h1>
-                        <div class="text-center mt-4">
-
-                        </div>
+                        <h1 class="text-sm-center ">Artificial Intelligence </h1>
                         <h2 class="overline">
                           <vue-typed-js :strings="['Artificial intelligence (AI),','is intelligence demonstrated by machines, unlike the natural intelligence displayed by humans and animals.  Artificial intelligence (AI), is intelligence demonstrated by machines, unlike the natural intelligence displayed by humans and animals. Leading AI textbooks define the field as the study of intelligent agents: any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals. Colloquially, the term artificial intelligence is often used to describe machines (or computers) that mimic cognitive functions that humans associate with the human mind, such as learning and problem solving.']">
                             <h4 class="text-center mt-4 typing">
                               </h4>
-
                           </vue-typed-js>
                         </h2>
-                        <v-form>
-
-                        </v-form>
-                        <div class="text-center">
-
-
-                        </div>
                       </v-card-text>
                     </v-col>
                   </v-row>
-
                 </v-window-item>
               </v-window>
             </v-card>
@@ -127,59 +101,12 @@
 </template>
 
 <script>
-// @ is an alias to /src
-
 export default {
   name: 'Home',
   components: {
-
   },
   data:() =>({
     step: 1,
-    darkinitiliazer: "$vuetify.theme.dark"
-   
   }),
-  
-  props:{
-    source: String
-  }
 }
 </script>
-
-
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-span {
-  display: inline-block;
-}
-
-.v--vtt-test,
-.v--vtt-test_odd {
-  will-change: transform, opacity;
-  transition: opacity 0.3s ease-in-out, transform 1s ease-in-out;
-}
-
-.v--vtt-test_visible,
-.v--vtt-test_odd_visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.v--vtt-test_hidden {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.v--vtt-test_odd_hidden {
-  opacity: 0;
-  transform: translateY(-20px);
-}
-</style>
